@@ -8,7 +8,7 @@ body {
   font-family: 'Muli', sans-serif;
   overflow: hidden;
   margin: 0;
-  background: #111;
+  background: rgba(1, 35, 7, 0.6);
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -32,7 +32,7 @@ body {
   background-size: cover;
   background-position: center;
   position: relative;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease;
 }
 
 .slide_text {
@@ -51,4 +51,23 @@ body {
 .active .slide_text {
   opacity: 1;
   transition: opacity 0.4s ease-in 0.4s;
+}
+
+@media (max-width: 480px) {
+  /* body {
+    flex-direction: column;
+  } */
+  .container {
+    height: 100%;
+    flex-direction: column;
+  }
+  .slide {
+    background-position: 50%;
+  }
+  .slide_2 {
+    background-position: 60%;
+  }
+  .slide_3 {
+    background-position: 80%;
+  }
 }
