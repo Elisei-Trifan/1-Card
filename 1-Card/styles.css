@@ -32,8 +32,23 @@ body {
   background-size: cover;
   background-position: center;
   position: relative;
+  transition: all 0.5s ease-in-out;
 }
 
 .slide_text {
   position: absolute;
+  font-size: 20px;
+  bottom: 20px;
+  margin: 0;
+  left: 20px;
+  opacity: 0;
+}
+
+.active {
+  flex: 10;
+}
+
+.active .slide_text {
+  opacity: 1;
+  transition: opacity 0.4s ease-in 0.4s;
 }
