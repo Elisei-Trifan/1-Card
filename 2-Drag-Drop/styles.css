@@ -47,6 +47,7 @@ body {
 }
 
 .placeholder {
+  border-radius: 20px;
   width: 150px;
   height: 66px;
 }
@@ -64,7 +65,9 @@ body {
 }
 
 .hold {
-  border: 2px solid red;
+  background-color: #8fd3f4;
+  color: black;
+  font-size: large;
 }
 
 .hide {
@@ -72,5 +75,6 @@ body {
 }
 
 .hovered {
-  border-top: 2px solid #8ed7ed;
+  background-color: #c2d4e1;
+  border: 2px solid #a4d6e6;
 }
