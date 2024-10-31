@@ -10,7 +10,7 @@ const colors = [
   '#F3752C',
   '#8F4E35',
 ]
-const SQUARE_NUMBERS = 500
+const SQUARE_NUMBERS = 400
 
 for (let i = 0; i < SQUARE_NUMBERS; i++) {
   const square = document.createElement('div')
@@ -27,8 +27,9 @@ for (let i = 0; i < SQUARE_NUMBERS; i++) {
 }
 
 function setColor(element) {
-  element.style.background = getRandomColor()
-  element.style.boxShadow = ` 0 0 2px ${getRandomColor()}, 0 0 10px ${getRandomColor()}`
+  const color = getRandomColor()
+  element.style.background = color
+  element.style.boxShadow = ` 0 0 2px ${color}, 0 0 10px ${color}`
 }
 
 function removeColor(element) {
