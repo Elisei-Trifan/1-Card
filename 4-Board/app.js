@@ -10,6 +10,7 @@ const colors = [
   '#F3752C',
   '#8F4E35',
   '#8B45E4',
+  '#98F7A1',
 ]
 const SQUARE_NUMBERS = 400
 
