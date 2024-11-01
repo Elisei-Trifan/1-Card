@@ -5,7 +5,7 @@ const board = document.querySelector('#board')
 const timeList = document.querySelector('#time-list')
 const timeElement = document.querySelector('#time')
 
-let time = 11
+let time = 0
 let score = 0
 
 startBtn.addEventListener('click', (event) => {
@@ -25,10 +25,9 @@ board.addEventListener('click', (event) => {
   if (event.target.classList.contains('circle')) {
     score++
     event.target.remove()
+    createElement()
   }
 })
-
-startGame()
 
 function startGame() {
   createElement()
@@ -52,10 +51,13 @@ function setTime(value) {
   timeElement.innerHTML = `00:${value}`
 }
 
-function finishGame() {}
+function finishGame() {
+  timeElement.parentNode.remove()
+  board.innerHTML = `<h1>Счет: <span class="primary">${score}</span></h1>`
+}
 
 function createElement() {
-  const size = getRandomNumber(10, 40)
+  const size = getRandomNumber(35, 40)
   const circle = document.createElement('div')
   const { width, height } = board.getBoundingClientRect()
 
